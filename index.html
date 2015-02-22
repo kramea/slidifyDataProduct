@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vehicle Choice Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Vehicle Choice Application">
+  <meta name="author" content="Kalai Ramea">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Vehicle Choice Application</h1>
+    <h2>Coursera Developing Data Products Assignment</h2>
+    <p>Kalai Ramea<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Transportation sector comprises about a third of greenhouse gas emissions in the US.</li>
+<li>Within that, two-thirds of energy use comes from light-duty cars and trucks.</li>
+<li>So, it&#39;s very important to know how the consumers make their car purchase decisions.</li>
+</ol>
+
+<div style='text-align: center;'>
+    <img height='300' src='emissions.png' />
+    <figcaption>Greenhouse Gas Emissions in the US (Source: EPA)</figcaption>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>&#39;Vehicle Choice&#39; Shiny Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>This application takes in simple buyer parameters such as driving profile, attitute towards new technology, and so on to see if they can afford zero emissions cars, through a nested-logit approach (that is calculated outside of application).</li>
+<li>An important part of the buyer affordability comes from infrastructure. It could be private (home / work), or it can be public (charging stations, etc.).</li>
+<li>This application can give a guideline on what low emission car technology the buyer can afford over a period of 15 years (2015 to 2030).</li>
+<li>It can also show how the buyer affordability can change based on basic infrastructure vs. public funded good infrastructure.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>A demo example</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Suppose if the buyer doesn&#39;t drive much (takes the car only to grocery stores), loves any new technology, and plans to buy a car in 2020 (it&#39;s a long time, but let&#39;s say he finishes his student loan then). </li>
+<li>The model predicts &#39;Gasoline Hybrid&#39; in a business-as-usual scenario. In this scenario government provides no subsidies for electric cars, and doesn&#39;t install any new station infrastructure.</li>
+<li>However, in a good infrastructure scenario, the model predicts &#39;electric vehicle&#39;! In this scenario, there are a lot of public funded charging stations, which removes the range anxiety of users.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Time series purchase trajectory over time</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The following graph is generated from the table for the buyer profile mentioned in the previous slide.It shows the top 10 technologies feasible for the buyer generated interactively from the R code.</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> 
+--- .class #id </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='&#39;Vehicle Choice&#39; Shiny Application'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='A demo example'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Time series purchase trajectory over time'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
